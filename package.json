@@ -1,0 +1,25 @@
+{
+  "name": "todo-list-api",
+  "version": "1.0.0",
+  "description": "RESTful API with Node.js Express and PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imdoug/todo-list-api.git"
+  },
+  "author": "imdoug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imdoug/todo-list-api/issues"
+  },
+  "homepage": "https://github.com/imdoug/todo-list-api#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.16.0"
+  }
+}

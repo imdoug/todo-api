@@ -1,2 +1,2 @@
-# todo-api
-RESTful API with Node.js Express and PostgreSQL
+# todo-list-api
+Todo list Api using Node.js and Postgrest 
