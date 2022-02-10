@@ -6,7 +6,6 @@ const postgres = require('../database.js');
 // LOGIN ROUTE
 router.post('/', (req, res) => {
     const {email, password} = req.body
-    const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10))
     postgres.query(`SELECT * FROM users WHERE email = '${email}'`,(err,results)=>{
         if(err){
             res.send('We had a problem during your login')

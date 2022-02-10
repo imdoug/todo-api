@@ -7,9 +7,9 @@ const postgres = require('./database.js')
 app.use(express.json());
 
 // ROUTES
-const itemsController = require('./controller/item.js')
-const usersController = require('./controller/users.js')
-const sessionController = require('./controller/sessions.js')
+const itemsController = require('./controllers/item.js')
+const usersController = require('./controllers/users.js')
+const sessionController = require('./controllers/sessions.js')
 app.use('/items', itemsController)
 app.use('/users', usersController)
 app.use('/sessions', sessionController)
