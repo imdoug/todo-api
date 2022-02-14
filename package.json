@@ -1,6 +1,10 @@
 {
   "name": "todo-list-api",
   "version": "1.0.0",
+  "engines":{
+    "node": "17.0.1",
+    "npm": "8.1.0"
+  },
   "description": "RESTful API with Node.js Express and PostgreSQL",
   "main": "server.js",
   "scripts": {
