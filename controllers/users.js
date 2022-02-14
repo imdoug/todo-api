@@ -31,8 +31,8 @@ router.post('/', (req, res) => {
         // if email is unique and is not registered yet
         }else{
             postgres.query(`INSERT INTO users (email, password) VALUES ('${email}','${hashedPassword}')`, (err, results) => {
-                postgres.query('SELECT * FROM users ORDER BY user_id ASC;', (err, results)=>{
-                    res.json(results.rows)
+                postgres.query('SELECT * FROM users ORDER BY user_id DESC;', (err, results)=>{
+                    res.json(results.rows[0])
                 })
             }); 
         }
