@@ -1,31 +1,29 @@
 # todo-list-api
 
-Todo list Api using Node.js and Postgrest 
+## set up
 
-### User model
+To run this 
 
-User model is composed by:
-- email ( with maximun of 32 character )
-- password ( that will store the hashed password )
-- user_id (unique id that will be linked to each item that is created by the user)
+1. fork this repo
 
-Item model is composed by 
+in your terminal
+1. clone your fork of this repo onto your local computer
+2. cd into the local repo
+3. run npm install
 
-- item_id (unique id to each item )
-- title (todo title)
-- description  ( ....... )
-- duedate (2022-02-14)
-- tags ( an array of text )
-- creator_id FOREIGN KEY REFERENCED BY user_id 
+local postgres
+1. open your postgres app and start the db server
 
+1. in your terminal, run psql 
+2. once inside psql, run:
+    * CREATE DATABASE todo_database;
+    * \c todo_database 
+    * CREATE TABLE people (user_id SERIAL PRIMARY KEY, email VARCHAR(32) , password VARCHAR(1000));
+    * Don’t insert any users from the terminal otherwise the password won’t be hashed and you won’t be able to login correctly . 
+    * CREATE TABLE item (item_id SERIAL, title VARCHAR(32), description VARCHAR(255), duedate DATE, tags TEXT[], creator_id FOREIGN KEY REFERENCES users (user_id) );
 
-Each Item created will carry the creator id so we only allow the owner of that todo to update, delete, and see those todos. 
+in your terminal
+1. run node server.js
 
-#### Live app 
-
-https://todo-cloud-app.herokuapp.com/
-
-
-front end https://github.com/imdoug/todo-angular/
-
-
+in your browser
+go to http://localhost:8000/ to view local app (this uses your local database)
