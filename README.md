@@ -23,8 +23,9 @@ Each Item created will carry the creator id so we only allow the owner of that t
 
 #### Live app 
 
-front end https://github.com/imdoug/todo-angular/
+https://todo-cloud-app.herokuapp.com/
 
-https://dashboard.heroku.com/apps/todo-cloud-app
+
+front end https://github.com/imdoug/todo-angular/
 
 
