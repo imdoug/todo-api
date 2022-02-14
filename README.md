@@ -2,8 +2,6 @@
 
 ## set up
 
-To run this 
-
 1. fork this repo
 
 in your terminal
